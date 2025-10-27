@@ -1,5 +1,5 @@
 import { getCloudflareContext } from "@opennextjs/cloudflare";
-import { createAuthFactory } from '@/lib/auth'
+import { getNextAuth } from '@/lib/auth'
 import { redirect } from "next/navigation";
 
 export default async function DashboardLayout({
@@ -9,7 +9,7 @@ export default async function DashboardLayout({
 }>) {
   const context = getCloudflareContext({ async: false });
   const env = context.env;
-  const { auth } = createAuthFactory(env);
+  const { auth } = getNextAuth(env);
   const session = await auth();
   if (!session) {
     redirect("/sign-in");

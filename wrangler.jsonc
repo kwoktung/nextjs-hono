@@ -17,7 +17,7 @@
   },
   "d1_databases": [
     {
-      "binding": "D1",
+      "binding": "DB",
       "database_name": "NextJS-Hono-Cloudflare",
       "database_id": "17ea1884-a7c1-4019-b03c-7eabedebe0fa",
       "migrations_dir": "./src/database/migrations"

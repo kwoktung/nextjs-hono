@@ -20,6 +20,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Cloudflare Wrangler
+
+This project uses Cloudflare Wrangler for deployment and D1 database management.
+
+### Upgrade Wrangler
+
+To upgrade Wrangler to the latest version:
+
+```bash
+yarn upgrade wrangler --latest
+```
+
+Verify the installation:
+
+```bash
+yarn wrangler --version
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

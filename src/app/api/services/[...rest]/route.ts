@@ -1,5 +1,5 @@
 import { OpenAPIHono } from "@hono/zod-openapi";
-import { Scalar } from '@scalar/hono-api-reference'
+import { Scalar } from "@scalar/hono-api-reference";
 
 import bookApp from "./book";
 
@@ -15,11 +15,13 @@ app.doc31("/docs", {
     version: "1.0.0",
   },
 });
-app.get("/scalar", Scalar({
+app.get(
+  "/scalar",
+  Scalar({
     url: `${basePath}/docs`,
     title: "Services API",
-}))
-
+  }),
+);
 
 export const GET = app.fetch;
 export const POST = app.fetch;

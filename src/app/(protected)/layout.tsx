@@ -7,7 +7,7 @@ export default async function DashboardLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const context = getCloudflareContext({ async: false });
+  const context = await getCloudflareContext({ async: true });
   const env = context.env;
   const { auth } = getNextAuth(env);
   const session = await auth();

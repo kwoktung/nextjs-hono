@@ -23,8 +23,8 @@ app.get(
   }),
 );
 
-export const GET = app.fetch;
-export const POST = app.fetch;
-export const PUT = app.fetch;
-export const DELETE = app.fetch;
-export const PATCH = app.fetch;
+export const GET = (req: Request) => app.fetch(req);
+export const POST = (req: Request) => app.fetch(req);
+export const PUT = (req: Request) => app.fetch(req);
+export const DELETE = (req: Request) => app.fetch(req);
+export const PATCH = (req: Request) => app.fetch(req);
